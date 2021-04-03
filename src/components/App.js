@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Accordion from './Accordion';
 import Search from './Search'
 import DropDown from './Dropdown'
+import Translate from './Translate'
 
 const items = [
     {
@@ -32,14 +33,12 @@ const options =[
     }
 ]
 
+
  const App = () =>{
     const [selected, setSelected] = useState(options[0])
     return(
-        <div>
-            <DropDown 
-            selected = {selected}
-            onSelectedChange = {setSelected}
-            options={options}/>
+        <div className="ui container">
+            <Translate />
 
         </div>
     )
